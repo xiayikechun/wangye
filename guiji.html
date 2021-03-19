@@ -56,7 +56,7 @@
         let map = new AMap.Map("container");
         let xhr = new XMLHttpRequest();
         let gps = {};
-        xhr.open('GET', 'https://tsapi.amap.com/v1/track/terminal/trsearch' + location.search + '&key=875e70eb4c151cd8d142a00498c83ed9&sid=270615&pagesize=999', true);
+        xhr.open('GET', 'https://tsapi.amap.com/v1/track/terminal/trsearch' + location.search + '&pagesize=999', true);
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 gps = JSON.parse(xhr.responseText).data.tracks[0].points;
