@@ -43,7 +43,7 @@
         let map = new AMap.Map("container");
         let gps;
         let xhr = new XMLHttpRequest();
-        xhr.open('GET', 'https://tsapi.amap.com/v1/track/terminal/lastpoint' + location.search + '&sid=270615&correction=n', true);
+        xhr.open('GET', 'https://tsapi.amap.com/v1/track/terminal/lastpoint' + location.search + '&correction=n', true);
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 let data = JSON.parse(xhr.responseText).data;
